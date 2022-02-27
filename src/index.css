@@ -11,6 +11,8 @@ body {
     background-color: #202142;
     color: #fff;
     line-height: 1.6;
+    background: url("../public/assets/images/bg-map.jpg");
+    background-attachment: fixed;
 }
 
 ul {
@@ -124,7 +126,12 @@ input:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #202142;
+    padding: 10px;
+    border-radius: 15px;
 }
+
+
 
 .num-display {
     position: absolute;
@@ -243,6 +250,7 @@ input:focus {
     position: absolute;
     top: 2px;
     margin-left: 10px;
+    color: palevioletred;
 
 }
 
