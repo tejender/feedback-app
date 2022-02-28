@@ -1,6 +1,10 @@
 import React from 'react'
 import FeedackItem from './FeedbackItem'
-function feedbackList({feedback,handleDelete}) {
+import { useContext } from 'react'
+import FeedbackContext from '../context/FeedbackContext' 
+
+function FeedbackList() {
+  const { feedback }= useContext(FeedbackContext)
     if(!feedback  || feedback.length===0){
         return <p>No feedback</p>
     }
@@ -10,11 +14,11 @@ function feedbackList({feedback,handleDelete}) {
              
             feedback.map((item)=>(
                
-              <FeedackItem key={item.id} item={item} handleDelete={handleDelete}/>
+              <FeedackItem key={item.id} item={item} />
             ))
         }
     </div>
   )
 }
 
-export default feedbackList
+export default FeedbackList
